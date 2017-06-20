@@ -27,14 +27,16 @@ export class HomePage {
 
   }
 
- itemTapped(event,item){
-    this.navCtrl.push(VideosPage);    
+//  itemTapped(event,item){
+//     this.navCtrl.push(VideosPage);    
+//   }
+
+  itemTapped(event,item){
+    this.navCtrl.push(VideosPage,{
+      item: item
+    });    
   }
-  // itemTapped(event,item){
-  //   this.navCtrl.push(HomePage,{
-  //     item: item
-  //   });    
-  // }
+  
 
 
   regularShare(){
