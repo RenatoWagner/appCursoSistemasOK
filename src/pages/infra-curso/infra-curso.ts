@@ -25,6 +25,10 @@ export class InfraCursoPage {
         name: 'title',
         placeholder: 'Title'
       },
+      {
+        name: 'descricao',
+        placeholder: 'Descricao'
+      }
     ],
     buttons: [
       {
@@ -37,7 +41,8 @@ export class InfraCursoPage {
         text: 'Save',
         handler: data => {
           this.infras.push({
-            title: data.title
+            title: data.title,
+            descricao:data.descricao
           });
         }
       }

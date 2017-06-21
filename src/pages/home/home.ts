@@ -20,7 +20,7 @@ export class HomePage {
    
 
   constructor(public navCtrl: NavController,public navParams: NavParams,public alertCtrl: AlertController, db: AngularFireDatabase, private socialSharing: SocialSharing) {
-    this.dados = db.list('/dadosHome');
+    this.dados = db.list('/noticiasHome');
     this.selectedItem = navParams.get('item');
 
     
@@ -50,7 +50,7 @@ export class HomePage {
     message: "Digita ai",
     inputs: [
       {
-        name: 'title',
+        name: 'titulo',
         placeholder: 'Titulo'
       },
       {
@@ -69,7 +69,7 @@ export class HomePage {
         text: 'Save',
         handler: data => {
           this.dados.push({
-            title: data.title,
+            titulo: data.titulo,
             descricao: data.descricao
 
           });

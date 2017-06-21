@@ -9,24 +9,12 @@
 
 <ion-content  padding>
 
-  <!--<ion-slides (ionSlideDidChange)="slideChanged()"  effect="flip">
-    <ion-slide>
-      <img src='../../assets/img/logofacisa2.png'>
-    </ion-slide>
-    <ion-slide >
-      <img src='../../assets/img/si.jpg'>
-    </ion-slide>
-    <ion-slide >
-      <h2>Bem vindo ao Aplicativo do Curso de Sistemas de Informação </h2>
-      <img src='../../assets/img/pcicon.png'>
-    </ion-slide>
-  </ion-slides>-->
-
+<ion-title style="text-align: center; margin-bottom: 25px; font-size: 16px;">Noticias Sobre o Curso de Sistemas</ion-title>
 <ion-card *ngFor="let dado of dados | async">
   
   <ion-card-content>
     <ion-card-title>
-      {{dado.title}}
+      {{dado.titulo}}
       </ion-card-title>
     <p>
       {{dado.descricao}}
@@ -52,10 +40,10 @@
 
 
 <!--  Botão para Cadastro de Noticias na Home  -->
- <ion-buttons end>
+ <!--<ion-buttons end>
     <button ion-button icon-only (click)="addDado()">
       <ion-icon name="add"></ion-icon>
     </button>
-  </ion-buttons>
+  </ion-buttons>-->
 
 </ion-content>
