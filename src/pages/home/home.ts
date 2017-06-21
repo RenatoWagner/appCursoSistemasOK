@@ -4,7 +4,7 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 //import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {NavController,AlertController,NavParams} from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { VideosPage } from '../videos/videos';
+import {NoticiaDetalhePage} from '../../pages/noticia-detalhe/noticia-detalhe';
 
 
 @Component({
@@ -18,10 +18,13 @@ export class HomePage {
 
    selectedItem: any;
    
+    
 
   constructor(public navCtrl: NavController,public navParams: NavParams,public alertCtrl: AlertController, db: AngularFireDatabase, private socialSharing: SocialSharing) {
     this.dados = db.list('/noticiasHome');
-    this.selectedItem = navParams.get('item');
+    //this.selectedItem = navParams.get('item');
+    
+    
 
     
 
@@ -31,9 +34,9 @@ export class HomePage {
 //     this.navCtrl.push(VideosPage);    
 //   }
 
-  itemTapped(event,item){
-    this.navCtrl.push(VideosPage,{
-      item: item
+  itemTapped(event,dados){
+    this.navCtrl.push(NoticiaDetalhePage,{
+      dados: dados
     });    
   }
   

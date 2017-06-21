@@ -14,6 +14,7 @@ import { InfraCursoPage } from '../pages/infra-curso/infra-curso';
 import { matrizCurricularPage } from '../pages/matrizCurricular/matrizCurricular';
 import { PesquisaPage } from '../pages/pesquisa/pesquisa';
 import { VideosPage } from '../pages/videos/videos';
+import {NoticiaDetalhePage} from '../pages/noticia-detalhe/noticia-detalhe';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -40,7 +41,8 @@ export const firebaseConfig  = {
     FinanciamentosPage,
     InfraCursoPage,
     PesquisaPage,
-    VideosPage
+    VideosPage,
+    NoticiaDetalhePage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ export const firebaseConfig  = {
     FinanciamentosPage,
     InfraCursoPage,
     PesquisaPage,
-    VideosPage
+    VideosPage,
+    NoticiaDetalhePage
   ],
   providers: [
     StatusBar,

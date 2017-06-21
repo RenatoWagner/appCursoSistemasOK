@@ -19,15 +19,16 @@
 <ion-content padding>
 
   <ion-list>
-  <ion-item  text-wrap *ngFor="let pesquisa of pesquisas | async" (click)="showOptions(pesquisa.$key, pesquisa.title)">
-    {{pesquisa.title}}
+  <ion-item  text-wrap *ngFor="let pesquisa of pesquisas | async">
+    <h1 style="margin-bottom: 25px; text-align: center">{{pesquisa.title}}</h1>
+    <p>{{pesquisa.descricao}}</p>
   </ion-item>
 </ion-list>
 
-  <ion-buttons end>
+  <!--<ion-buttons end>
     <button ion-button icon-only (click)="addPesquisa()">
       <ion-icon name="add"></ion-icon>
     </button>
-  </ion-buttons>
+  </ion-buttons>-->
 
 </ion-content>

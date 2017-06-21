@@ -23,6 +23,10 @@ export class PesquisaPage {
         name: 'title',
         placeholder: 'Title'
       },
+      {
+        name: 'descricao',
+        placeholder: 'Descricao'
+      }
     ],
     buttons: [
       {
@@ -35,7 +39,8 @@ export class PesquisaPage {
         text: 'Save',
         handler: data => {
           this.pesquisas.push({
-            title: data.title
+            title: data.title,
+            descricao: data.descricao
           });
         }
       }

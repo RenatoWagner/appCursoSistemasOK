@@ -15,6 +15,7 @@ import {CursoPage} from '../pages/curso/curso';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
